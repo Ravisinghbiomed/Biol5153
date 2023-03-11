@@ -29,16 +29,16 @@ module purge
 module load intel/18.0.1 impi/18.0.1 mkl/18.0.1
 module load blast
 
-# concatenate all the genomes into a single file called ‘genomes.fas’
+###### concatenate all the genomes into a single file called ‘genomes.fas’
 
 cd $SLURM_SUBMIT_DIR
 cat *.fasta > genomes.fas
 
-# make a blast database of all the genomes
+###### make a blast database of all the genomes
 
 makeblastdb -in genomes.fas -dbtype nucl
 
-# search the unknown sequence against your database
+###### search the unknown sequence against your database
 
 blastn -query  /storage/ravis/unknown.fa  -db genomes.fas >  unknown.vs.genomes.blastn`
 
