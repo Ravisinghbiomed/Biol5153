@@ -66,5 +66,3 @@ From your local computer run `rsync -avh  ravis@hpc-portal2.hpc.uark.edu:/storag
 
 
 
-
-ravisingh@LAPTOP-SHREESHYAMJI:/mnt/c/Users/pythonclass/watermelon_files$ 
