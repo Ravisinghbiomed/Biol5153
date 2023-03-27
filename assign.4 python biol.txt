@@ -1,0 +1,22 @@
+  GNU nano 6.2                                     write_pinnacle_slurm.py                                              #!/bin//env python3
+
+job_name = input ('input job name')
+queue = input ('Num_queue')
+number_of_nodes = input ('enter_Num_nodes')
+number_of_processors = input ('number of processors')
+walltime = input('walltime')
+mail_type = input ('enter your emailtype')
+email = input('enter your email')
+
+print('#SBATCH --job-name= ',job_name)
+print('#SBATCH --partition ',queue)
+print('#SBATCH --nodes= ',number_of_nodes)
+print('#SBATCH --task-per-node= ',number_of_processors)
+print('#SBATCH --time= ',walltime)
+print('#SBATCH -o %',job_name,'.out')
+print('#SBATCH -e %',job_name,'.err')
+print('#SBATCH --mail-type=',mail_type)
+print('#SBATCH --mail-user=',email)
+
+print('cd $SLURM_SUBMIT_DIR')
+
