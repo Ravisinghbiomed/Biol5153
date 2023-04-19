@@ -30,7 +30,7 @@ with open(args.gff) as beyonce:
 	        columns   = lines.split9'\t')
 	        
 	#give variable names to the columns
-	organusm     = columns[0]
+	organism     = columns[0]
 	source       = columns[1]
 	feature_type = column[2]
 	start        = int(column[3])
